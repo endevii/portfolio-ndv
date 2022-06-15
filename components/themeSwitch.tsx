@@ -23,7 +23,7 @@ export default function ThemeSwitch() {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        className="text-gray-900 hover:text-red-900 dark:text-gray-100 dark:hover:text-yellow-200"
+        className="transition-color text-gray-900 hover:text-red-900 dark:text-gray-100 dark:hover:text-yellow-200 drop-shadow-sm"
       >
         {mounted && (theme === "dark" || resolvedTheme === "dark") ? (
           <path

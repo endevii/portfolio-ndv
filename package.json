@@ -13,6 +13,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
     "animejs": "^3.2.1",
+    "framer-motion": "^6.3.11",
     "next": "latest",
     "next-themes": "^0.2.0",
     "react": "18.1.0",
