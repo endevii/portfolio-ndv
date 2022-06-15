@@ -6,16 +6,18 @@ export default function FooterItem({
   key,
   itemName,
   itemTitle,
+  itemLink,
 }: {
   key: number;
   itemName: IconDefinition;
   itemTitle: string;
+  itemLink: string;
 }) {
   return (
     <>
       <div className={"transition-colors hover:text-yellow-500"}>
         <FontAwesomeIcon icon={itemName} className="pr-1"></FontAwesomeIcon>
-        <a href="#" target="_blank" rel="noreferrer">
+        <a href={itemLink} target="_blank" rel="noreferrer">
           {itemTitle}
         </a>
       </div>

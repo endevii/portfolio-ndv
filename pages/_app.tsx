@@ -6,11 +6,12 @@ import { ThemeProvider } from "next-themes";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
+import Script from "next/script";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <ThemeProvider attribute="class" enableSystem={true}>
+      <ThemeProvider attribute="class" defaultTheme="system">
         <Header />
         <Component {...pageProps} />
         <Footer />

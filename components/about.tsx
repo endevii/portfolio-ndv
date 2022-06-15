@@ -16,15 +16,25 @@ export default function About() {
     <div className="container px-4 mx-auto">
       <div className="lg:space-x-5 lg:flex lg:flex-row item-center lg:-mx-4 flex flex-col-reverse text-center lg:text-left">
         <div className="lg:px-4 lg:mt-12 ">
-          <h1 className="text-2xl font-bold text-gray-900 lg:text-5xl dark:text-white">
-            Hey there,
-          </h1>
+          <div className="">
+            <h1 className="text-2xl font-bold text-gray-900 lg:text-5xl dark:text-white">
+              Hey, I&apos;m Joshua...
+            </h1>
+          </div>
+
           <div className="mt-6 text-gray-800 dark:text-white">
             <p className="mb-4">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry&apos;s standard dummy
-              text ever since the 1500s, when an unknown printer took a galley
-              of type and scrambled it to make a type specimen book.
+              Welcome to my{" "}
+              <b className="text-red-900 dark:text-red-300">page!</b> I am a
+              current{" "}
+              <b className="text-red-900 dark:text-red-300">Computer Science</b>{" "}
+              major at{" "}
+              <b className="text-red-900 dark:text-red-300">
+                Stevens Institute of Technology
+              </b>
+              , hoping to get by BS by{" "}
+              <b className="text-red-900 dark:text-red-300">2024</b> and MS by{" "}
+              <b className="text-red-900 dark:text-red-300">2025</b>.
             </p>
           </div>
         </div>

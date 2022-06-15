@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply bg-white;
+    @apply dark:bg-slate-500;
+  }
+
   html {
     font-family: Proxima Nova, system-ui, sans-serif;
   }
