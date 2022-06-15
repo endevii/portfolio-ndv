@@ -1,14 +1,13 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab } from "@fortawesome/free-brands-svg-icons";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import { ThemeProvider } from "next-themes";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+config.autoAddCss = false;
 
-library.add(fab);
-
-function MyApp({ Component, pageProps }: AppProps) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <ThemeProvider attribute="class" enableSystem={true}>
@@ -19,5 +18,3 @@ function MyApp({ Component, pageProps }: AppProps) {
     </>
   );
 }
-
-export default MyApp;

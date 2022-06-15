@@ -1,6 +1,4 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Head from "next/head";
 import Link from "next/link";
 import ThemeSwitch from "./themeSwitch";
 
@@ -11,13 +9,18 @@ export default function Header() {
         <Link href={"/"}>
           <a
             className={
-              "font-medium tracking-wider transition-colors text-gray-900 hover:text-sky-500 uppercase dark:text-white dark:hover:text-yellow-200"
+              "font-medium tracking-wider transition-colors text-gray-900 hover:text-sky-500 dark:text-white dark:hover:text-yellow-200"
             }
           >
             Joshua Gorman
           </a>
         </Link>
-        <ThemeSwitch></ThemeSwitch>
+        <div>
+          <Link href={"/"}>
+            <a className=""></a>
+          </Link>
+          <ThemeSwitch></ThemeSwitch>
+        </div>
       </div>
     </div>
   );
