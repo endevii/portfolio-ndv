@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="space-y-14 lg:space-y-24">
+    <div className="flex flex-col content-center space-y-14 lg:space-y-24">
       <Head>
         <title>Joshua Gorman</title>
         <link rel="icon" href="/favicon.ico" />
@@ -17,9 +17,12 @@ export default function Home() {
         <About />
       </main>
       <section className="container px-4 mx-auto">
+        {/* grid-rows-2 */}
         <motion.div
-          className="h-auto grid grid-rows-2 gap-4 content-center lg:grid-cols-2 antialiased"
+          className="flex flex-col h-auto lg:grid  gap-4 content-center lg:grid-cols-2 antialiased"
           initial="hidden"
+          // whileInView="visible"
+          // viewport={{ once: true }}
           animate="visible"
           variants={{
             hidden: {
@@ -39,10 +42,10 @@ export default function Home() {
           }}
         >
           <div className="">
-            <Education />
+            <Skills />
           </div>
           <div className="">
-            <Skills />
+            <Education />
           </div>
         </motion.div>
       </section>

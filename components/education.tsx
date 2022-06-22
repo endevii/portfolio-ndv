@@ -25,7 +25,7 @@ export default function Education() {
         },
       }}
     >
-      <h1 className="text-2xl lg:text-3xl font-bold px-6 lg:p-0">Portfolio</h1>
+      <h1 className="text-2xl lg:text-3xl font-bold px-6 lg:p-0">Projects</h1>
       <div className="mx-5 px-0 h-auto w-auto rounded-md bg-opacity-50 backdrop-blur-sm drop-shadow-md bg-gray-100 border-black border-2 dark:bg-zinc-800 dark:bg-opacity-50">
         <div>
           <div className="align-middle h-6 bg-black border-b-2 border-black bg-opacity-50 p-0 mb-2 z-0">

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import profile from "../public/images/Ispotpic1jpg.jpg";
 import profileAlt from "../public/images/IMG_2303p2.jpg";
-import { motion, MotionProps } from "framer-motion";
+import { AnimatePresence, motion, MotionProps } from "framer-motion";
 
 export default function About() {
   const [image, setImage] = useState(profile);
@@ -15,7 +15,8 @@ export default function About() {
   }
 
   const [imageIsLoaded, setImageIsLoaded] = useState(false);
-  const testBasic: string = "text-red-900 dark:text-red-300 hover:underline";
+  const testBasic: string =
+    "text-red-900 dark:text-red-300 hover:underline hover:transition-all hover:text-xl hover:font-extrabold";
 
   const aboutMotion: any = {
     hidden: {
@@ -27,6 +28,12 @@ export default function About() {
       opacity: 1,
     },
   };
+
+  const [showInfo, setShowInfo] = useState(false);
+
+  function toggle() {
+    setShowInfo(!showInfo);
+  }
 
   return (
     <motion.div
@@ -115,9 +122,9 @@ export default function About() {
                 },
               }}
             >
-              <div className="mt-6 text-gray-800 dark:text-white">
+              <div className="mt-6 text-lg text-gray-800 dark:text-white">
                 <p className="mb-4">
-                  Welcome to my <b className={testBasic}>page!</b> I am a
+                  Welcome to my <b className={testBasic}>portflio!</b> I am a
                   current <b className={testBasic}>Computer Science</b> major at{" "}
                   <b className={testBasic}>Stevens Institute of Technology</b>,
                   hoping to get my BS by <b className={testBasic}>2024</b> and
@@ -143,7 +150,7 @@ export default function About() {
               },
             }}
           >
-            <div className="flex-shrink-0 sm:w-fit sm:mx-auto lg:mt-12 lg:px-2 mb-10">
+            <div className="flex-shrink-0 py-auto sm:w-fit sm:mx-auto lg:mt-12 lg:px-2 mb-10">
               <motion.div
                 className="p-0 m-0"
                 whileHover={{
@@ -153,20 +160,109 @@ export default function About() {
                   },
                 }}
               >
-                <Image
-                  src={image}
-                  alt="Profile"
-                  priority={true}
-                  className="object-cover rounded-full drop-shadow-md opacity-80"
-                  width={250}
-                  height={250}
-                  placeholder="blur"
-                  onMouseEnter={handleMouseEnter(profileAlt)}
-                  onMouseLeave={handleMouseEnter(profile)}
-                />
+                <div className="border-4 border-black rounded-lg overflow-hidden lg:mr-6 w-[250px] h-[250px] mx-auto lg:w-[140px] lg:h-[140px]">
+                  <Image
+                    src={image}
+                    alt="Profile"
+                    priority={true}
+                    className="object-cover drop-shadow-md opacity-80"
+                    width={250}
+                    height={250}
+                    placeholder="blur"
+                    onMouseEnter={handleMouseEnter(profileAlt)}
+                    onMouseLeave={handleMouseEnter(profile)}
+                  />
+                </div>
               </motion.div>
             </div>
           </motion.div>
+        </div>
+        {/* Wierd plus thing */}
+        <motion.button
+          initial="hidden"
+          animate="visible"
+          whileHover="hover"
+          variants={{
+            hover: {
+              scale: 1.2,
+            },
+            hidden: {
+              opacity: 0,
+              scale: 0,
+            },
+            visible: {
+              scale: 1,
+              opacity: 1,
+              transition: {
+                delay: 1.5,
+              },
+            },
+          }}
+          whileTap={{
+            scale: 0.8,
+            rotate: [-2, 2, 0],
+            transition: {
+              duration: 0.2,
+            },
+          }}
+          onClick={toggle}
+          className={`flex z-0 opacity-50 bg-black dark:bg-white dark:opacity-80 w-6 h-1 justify-center mx-auto ${
+            showInfo ? "mb-4" : "mb-6"
+          }`}
+        >
+          <div className="flex z-1 opacity-50 bg-black dark:bg-white items-center text-center dark:opacity-80 translate-y-[-11px] w-1 h-6 justify-center mx-auto"></div>
+        </motion.button>
+        <div
+          className={`text-gray-800 transition-all dark:text-white mb-6 mx-auto px-14
+            ${showInfo ? "visible" : "hidden"}
+          `}
+        >
+          <AnimatePresence>
+            <motion.span
+              initial="hidden"
+              whileInView="inView"
+              exit="onLeave"
+              variants={{
+                hidden: {
+                  scale: 0,
+                  opacity: 0,
+                },
+                inView: {
+                  scale: 1,
+                  opacity: 1,
+                  transition: {
+                    delayChildren: 1,
+                  },
+                },
+                onLeave: {
+                  scale: 0,
+                  opacity: 0,
+                  transition: {
+                    delay: 1,
+                  },
+                },
+              }}
+              className="text-lg"
+            >
+              My programming journey began in high school with{" "}
+              <b className={testBasic}>Visual Basic</b> and later{" "}
+              <b className={testBasic}>Java</b>. By the time I graduated I had
+              become very well versed in these languages. Now I am striving to
+              utilize modern web development frameworks like{" "}
+              <b className={testBasic}>Nextjs</b> and{" "}
+              <b className={testBasic}>Angular</b> to create web apps and small
+              projects like <b className={testBasic}>this portfolio</b>. I also
+              enjoy diving into mobile applications with{" "}
+              <b className={testBasic}>React Native</b> and{" "}
+              <b className={testBasic}>Swift</b> when I can. I am a{" "}
+              <b className={testBasic}>self-motivated</b> learner that often
+              goes <b className={testBasic}>above</b> and{" "}
+              <b className={testBasic}>beyond</b> of what I am asked for. I also
+              enjoy working in group settings where ideas can both be{" "}
+              <b className={testBasic}>shared</b> and{" "}
+              <b className={testBasic}>challenged</b> to better our end product.
+            </motion.span>
+          </AnimatePresence>
         </div>
       </motion.div>
     </motion.div>
