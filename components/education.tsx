@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import imge from "../public/images/IMG_2303p2.jpg";
+import imge from "../public/images/portfolioss.png";
 export default function Education() {
   return (
     <motion.div
@@ -39,7 +39,7 @@ export default function Education() {
 
         <div className="flex flex-col justify-between px-4 pb-4">
           <div className="text-left pb-2">
-            <h1 className="text-2xl pb-1">/title</h1>
+            <h1 className="text-2xl pb-1">/Portfolio</h1>
             <motion.div
               className="flex flex-row border-black border-2 my-3 bg-white"
               whileHover={{
@@ -55,16 +55,22 @@ export default function Education() {
                   alt="Profile"
                   priority={true}
                   className="object-cover drop-shadow-md opacity-80"
-                  width={250}
-                  height={250}
+                  width={1000}
+                  height={400}
                   placeholder="blur"
                 ></Image>
               </Link>
             </motion.div>
             <p className="text-lg">
-              Skills <b>Used:</b>{" "}
+              <b>Skills Used:</b> Next.js, TailwindCSS, Framer Motion, Graphic
+              Design
             </p>
-            <p className="px-2">Explain the project</p>
+            <p className="px-2">
+              <b>Description:</b> I wanted to make a portfolio website that
+              incapsulated everything that I did or will do whether that be
+              software engineering, web design, music, or other
+              artistic/practical adventures.
+            </p>
           </div>
           <div>
             <h1 className="text-2xl text-left pb-1">/title</h1>

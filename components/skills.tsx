@@ -1,5 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
+import {
+  faJava,
+  faPython,
+  faJsSquare,
+  faHtml5,
+  faCss3,
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
 export default function Skills() {
   return (
@@ -36,17 +45,54 @@ export default function Skills() {
         <div>
           <h1 className="text-2xl text-left px-4 pb-2">/Languages</h1>
           <div className="grid grid-cols-3 gap-8 px-4 pb-4">
-            <div className=" flex flex-row border-black border-2">
-              <p>Skill </p>
-              <p>Skills text</p>
+            <div className=" flex flex-col items-center border-black border-2 rounded-md py-1">
+              <FontAwesomeIcon
+                icon={faJava}
+                className="fa-2xl"
+              ></FontAwesomeIcon>
+              <p>Java </p>
             </div>
-            <div className=" flex flex-row border-black border-2">
-              <p>Skill </p>
-              <p>Skills text</p>
+            <div className=" flex flex-col items-center border-black border-2 rounded-md py-1">
+              <FontAwesomeIcon
+                icon={faPython}
+                className="fa-2xl"
+              ></FontAwesomeIcon>
+              <p>Python </p>
             </div>
-            <div className=" flex flex-row border-black border-2">
-              <p>Skill </p>
-              <p>Skills text</p>
+            <div className=" flex flex-col items-center border-black border-2 rounded-md py-1">
+              <FontAwesomeIcon
+                icon={faJsSquare}
+                className="fa-2xl"
+              ></FontAwesomeIcon>
+              <p>JavaScript </p>
+            </div>
+            <div className=" flex flex-col items-center border-black border-2 rounded-md py-1">
+              <FontAwesomeIcon
+                icon={faHtml5}
+                className="fa-2xl"
+              ></FontAwesomeIcon>
+              <p>HTML </p>
+            </div>
+            <div className=" flex flex-col items-center border-black border-2 rounded-md py-1">
+              <FontAwesomeIcon
+                icon={faCss3}
+                className="fa-2xl"
+              ></FontAwesomeIcon>
+              <p>CSS </p>
+            </div>
+            <div className=" flex flex-col items-center border-black border-2 rounded-md py-1">
+              <FontAwesomeIcon
+                icon={faJava}
+                className="fa-2xl"
+              ></FontAwesomeIcon>
+              <p>C++ </p>
+            </div>
+            <div className=" flex flex-col items-center border-black border-2 rounded-md py-1">
+              <FontAwesomeIcon
+                icon={faJava}
+                className="fa-2xl"
+              ></FontAwesomeIcon>
+              <p>C </p>
             </div>
           </div>
         </div>

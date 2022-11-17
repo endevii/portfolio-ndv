@@ -8,8 +8,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Header() {
   return (
+    // md:mb-6
     <motion.div
-      className="sticky drop-shadow-xl backdrop-blur-sm top-0 z-20 py-2 rounded-sm md:mb-6 bg-opacity-50 bg-slate-50 dark:bg-slate-500 dark:bg-opacity-50"
+      className="sticky drop-shadow-xl backdrop-blur-sm top-0 z-20 py-2 rounded-sm bg-opacity-50 bg-slate-50 dark:bg-slate-500 dark:bg-opacity-50"
       initial="hidden"
       animate="visible"
       variants={{
@@ -67,7 +68,7 @@ export default function Header() {
               }}
               className="pl-4 text-gray-900 transition-colors cursor-pointer hover:text-red-900 dark:text-white dark:hover:text-yellow-200"
             >
-              Test{" "}
+              Hello{" "}
             </motion.a>
           </Link>
           <ThemeSwitch></ThemeSwitch>

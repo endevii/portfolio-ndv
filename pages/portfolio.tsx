@@ -12,6 +12,7 @@ export default function Portfolio() {
         <title>Joshua Gorman</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <main></main>
     </div>
   );
 }
