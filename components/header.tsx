@@ -3,14 +3,25 @@ import Link from "next/link";
 import ThemeSwitch from "./themeSwitch";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import useScrollPosition from "../hooks/useScrollPosition";
 // Making a gradient background
 // bg-gradient-to-r from-slate-50 to-yellow-100 md:py-6
 
 export default function Header() {
+  function classNames(...classes: String[]) {
+    return classes.filter(Boolean).join(" ");
+  }
+  const scrollPosition = useScrollPosition();
+
   return (
     // md:mb-6
     <motion.div
-      className="sticky drop-shadow-xl backdrop-blur-sm top-0 z-20 py-2 rounded-sm bg-opacity-50 bg-slate-50 dark:bg-slate-500 dark:bg-opacity-50"
+      className={classNames(
+        scrollPosition > 0
+          ? "bg-opacity-50 bg-slate-50 dark:bg-slate-500 dark:bg-opacity-50 drop-shadow-xl backdrop-blur-sm"
+          : "bg-opacity-100 bg-gray-100 dark:bg-zinc-700 dark:bg-opacity-100",
+        "sticky top-0 z-20 py-2 rounded-sm transition-color duration-300 ease-in-out"
+      )}
       initial="hidden"
       animate="visible"
       variants={{
