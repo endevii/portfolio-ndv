@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import imge from "../public/images/portfolioss.png";
+import teamup from "../public/images/teamup.png";
 export default function Education() {
   return (
     <motion.div
@@ -54,7 +55,7 @@ export default function Education() {
                   src={imge}
                   alt="Profile"
                   priority={true}
-                  className="object-cover drop-shadow-md opacity-80"
+                  className="object-cover object-center drop-shadow-md opacity-80 md:object-none"
                   width={1000}
                   height={400}
                   placeholder="blur"
@@ -72,18 +73,46 @@ export default function Education() {
               artistic/practical adventures.
             </p>
           </div>
-          <div>
-            <h1 className="text-2xl text-left pb-1">/title</h1>
-            <div className="flex flex-row border-black border-2 my-3">
-              <p>Skill </p>
-              <p>Skills text</p>
-            </div>
+          <div className="text-left pb-2">
+            <h1 className="text-2xl text-left pb-1">/TeamUp!</h1>
+            <motion.div
+              className="flex flex-row border-black border-2 my-3 bg-white"
+              whileHover={{
+                scale: 1.1,
+              }}
+              whileTap={{
+                scale: 0.8,
+              }}
+            >
+              <Link href="/">
+                <Image
+                  src={teamup}
+                  alt="Profile"
+                  priority={true}
+                  className="object-cover object-center drop-shadow-md opacity-80 md:object-none"
+                  width={1000}
+                  height={400}
+                  placeholder="blur"
+                ></Image>
+              </Link>
+            </motion.div>
+            <p className="text-lg">
+              <b>Skills Used:</b> JavaScript, Node.js, Bootstrap, Express,
+              MongoDB, Handlebars
+            </p>
+            <p className="px-2">
+              <b>Description:</b> Worked with a team of 3 to create a web
+              application that served to connect people with similar interests.
+              The main goal of the project was to allow open-source projects to
+              create and foster a community while also along those who want to
+              contribute to a start up an inviting place to do so.
+            </p>
           </div>
-
+          {/* 
           <div className="flex flex-row border-black border-2 my-3">
             <p>Skill </p>
             <p>Skills text</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </motion.div>

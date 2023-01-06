@@ -54,15 +54,18 @@ export default function Header() {
           </motion.a>
         </Link>
         <div className="flex items-center font-light">
-          <motion.button
+          <motion.a
             whileHover={{
               scale: 0.9,
             }}
-            className="text-gray-900 text-center rounded-md hover:drop-shadow-md hover:border-1 border-black/20 transition-all hover:px-2 hover:bg-gray-300/30 dark:hover:bg-slate-700/20 hover:text-red-900 dark:text-white dark:hover:text-yellow-200"
+            className="text-gray-900 text-center cursor-pointer rounded-md hover:drop-shadow-md hover:border-1 border-black/20 transition-all hover:px-2 hover:bg-gray-300/30 dark:hover:bg-slate-700/20 hover:text-red-900 dark:text-white dark:hover:text-yellow-200"
+            href="https://docs.google.com/document/d/1R5Tu0H2PlXuROgFexqWyhbq_I0WrUuNVZMuBfwIpwMs/edit?usp=sharing"
+            target="_blank"
+            download
           >
             Resume
-          </motion.button>
-          <Link href="portfolio">
+          </motion.a>
+          {/* <Link href="portfolio">
             <motion.a
               whileHover={{
                 scale: 0.9,
@@ -71,7 +74,7 @@ export default function Header() {
             >
               Portfolio{" "}
             </motion.a>
-          </Link>
+          </Link> */}
           <Link href="test">
             <motion.a
               whileHover={{

@@ -12,7 +12,9 @@ export default function Portfolio() {
         <title>Joshua Gorman</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main></main>
+      <main className="mx-[100px] px-[50px] flex justify-center align-middle">
+        <Education />
+      </main>
     </div>
   );
 }

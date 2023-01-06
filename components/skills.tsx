@@ -81,17 +81,17 @@ export default function Skills() {
               <p>CSS </p>
             </div>
             <div className=" flex flex-col items-center border-black border-2 rounded-md py-1">
-              <FontAwesomeIcon
+              {/* <FontAwesomeIcon
                 icon={faJava}
                 className="fa-2xl"
-              ></FontAwesomeIcon>
+              ></FontAwesomeIcon> */}
               <p>C++ </p>
             </div>
             <div className=" flex flex-col items-center border-black border-2 rounded-md py-1">
-              <FontAwesomeIcon
+              {/* <FontAwesomeIcon
                 icon={faJava}
                 className="fa-2xl"
-              ></FontAwesomeIcon>
+              ></FontAwesomeIcon> */}
               <p>C </p>
             </div>
           </div>
