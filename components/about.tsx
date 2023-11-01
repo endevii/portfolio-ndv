@@ -244,6 +244,7 @@ export default function About() {
               }}
               className="text-lg"
             >
+              <hr className="h-px my-5 bg-black border-0"/>
               My programming journey began in high school with{" "}
               <b className={testBasic}>Visual Basic</b> and later{" "}
               <b className={testBasic}>Java</b>. By the time I graduated I had

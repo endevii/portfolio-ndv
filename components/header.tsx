@@ -75,7 +75,7 @@ export default function Header() {
               Portfolio{" "}
             </motion.a>
           </Link> */}
-          <Link href="test">
+          {/* <Link href="test">
             <motion.a
               whileHover={{
                 scale: 0.9,
@@ -84,7 +84,7 @@ export default function Header() {
             >
               Hello{" "}
             </motion.a>
-          </Link>
+          </Link> */}
           <ThemeSwitch></ThemeSwitch>
         </div>
       </div>

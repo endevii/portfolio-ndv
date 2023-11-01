@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import imge from "../public/images/portfolioss.png";
-import teamup from "../public/images/teamup.png";
+import stevens_logo from "../public/images/stevens_logo.png";
+
 export default function Education() {
   return (
     <motion.div
@@ -26,7 +26,7 @@ export default function Education() {
         },
       }}
     >
-      <h1 className="text-2xl lg:text-3xl font-bold px-6 lg:p-0">Projects</h1>
+      <h1 className="text-2xl lg:text-3xl font-bold px-6 lg:p-0">Education</h1>
       <div className="mx-5 px-0 h-auto w-auto rounded-md bg-opacity-50 backdrop-blur-sm drop-shadow-md bg-gray-100 border-black border-2 dark:bg-zinc-800 dark:bg-opacity-50">
         <div>
           <div className="align-middle h-6 bg-black border-b-2 border-black bg-opacity-50 p-0 mb-2 z-0">
@@ -37,82 +37,24 @@ export default function Education() {
             </div>
           </div>
         </div>
+<h1 className="text-2xl text-left px-4 pb-2">/Stevens Insititue of Technology</h1>
+        <div className="flex flex-col align-middle justify-center m-2 rounded-md bg-gray-200 dark:bg-zinc-500 px-4 pb-4 border-black bg-opacity-50 backdrop-blur-sm drop-shadow-md border-2 dark:bg-opacity-50">
+          <div className="flex flex-row justify-between">
+            <div className="drop-shadow-md">
+            <Image src={stevens_logo} alt="Stevens Logo"></Image>
 
-        <div className="flex flex-col justify-between px-4 pb-4">
-          <div className="text-left pb-2">
-            <h1 className="text-2xl pb-1">/Portfolio</h1>
-            <motion.div
-              className="flex flex-row border-black border-2 my-3 bg-white"
-              whileHover={{
-                scale: 1.1,
-              }}
-              whileTap={{
-                scale: 0.8,
-              }}
-            >
-              <Link href="/">
-                <Image
-                  src={imge}
-                  alt="Profile"
-                  priority={true}
-                  className="object-cover object-center drop-shadow-md opacity-80 md:object-none"
-                  width={1000}
-                  height={400}
-                  placeholder="blur"
-                ></Image>
-              </Link>
-            </motion.div>
-            <p className="text-lg">
-              <b>Skills Used:</b> Next.js, TailwindCSS, Framer Motion, Graphic
-              Design
-            </p>
-            <p className="px-2">
-              <b>Description:</b> I wanted to make a portfolio website that
-              incapsulated everything that I did or will do whether that be
-              software engineering, web design, music, or other
-              artistic/practical adventures.
-            </p>
+            </div>
+            <div className="flex flex-col align-middle justify-center m-5 border-black border-2 p-2 rounded-md bg-gray-200 bg-opacity-25 backdrop-blur-sm drop-shadow-md dark:bg-zinc-400 dark:bg-opacity-30">
+              <p className="text-lg text-left">B.S. in Computer Science</p> 
+              <p className="text-lg text-left">GPA: 3.9</p>
+              <p className="text-lg text-left">Expected Grad date: May 2024</p>
+            </div>
           </div>
-          <div className="text-left pb-2">
-            <h1 className="text-2xl text-left pb-1">/TeamUp!</h1>
-            <motion.div
-              className="flex flex-row border-black border-2 my-3 bg-white"
-              whileHover={{
-                scale: 1.1,
-              }}
-              whileTap={{
-                scale: 0.8,
-              }}
-            >
-              <Link href="/">
-                <Image
-                  src={teamup}
-                  alt="Profile"
-                  priority={true}
-                  className="object-cover object-center drop-shadow-md opacity-80 md:object-none"
-                  width={1000}
-                  height={400}
-                  placeholder="blur"
-                ></Image>
-              </Link>
-            </motion.div>
-            <p className="text-lg">
-              <b>Skills Used:</b> JavaScript, Node.js, Bootstrap, Express,
-              MongoDB, Handlebars
-            </p>
-            <p className="px-2">
-              <b>Description:</b> Worked with a team of 3 to create a web
-              application that served to connect people with similar interests.
-              The main goal of the project was to allow open-source projects to
-              create and foster a community while also along those who want to
-              contribute to a start up an inviting place to do so.
-            </p>
-          </div>
-          {/* 
-          <div className="flex flex-row border-black border-2 my-3">
-            <p>Skill </p>
-            <p>Skills text</p>
-          </div> */}
+              <div>
+                <h2 className="text-xl text-left pb-2">/Relevant Coursework</h2>
+                <hr className="h-px bg-black border-0 dark:bg-white"/>
+                <p className="text-left"> Data Structures & Algorithms, Web Programming I & II, Computer Architecture and Organization, Operating Systems, Systems Programming, Principles of Programming Languages, Agile Methods for Software Development, Database Management Systems, TCP/IP Networking, Human-Computer Interaction</p>
+              </div>
         </div>
       </div>
     </motion.div>

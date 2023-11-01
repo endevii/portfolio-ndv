@@ -1,7 +1,7 @@
 import Head from "next/head";
 import About from "../components/about";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Education from "../components/education";
+import Portfol from "../components/portfolio";
 import Skills from "../components/skills";
 import { motion } from "framer-motion";
 
@@ -13,7 +13,7 @@ export default function Portfolio() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="mx-[100px] px-[50px] flex justify-center align-middle">
-        <Education />
+        <Portfol />
       </main>
     </div>
   );

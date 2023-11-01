@@ -1,8 +1,10 @@
 import Head from "next/head";
 import About from "../components/about";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Education from "../components/education";
+import Portfol from "../components/portfolio";
 import Skills from "../components/skills";
+import Education from "../components/education";
+import Experiance from "../components/experiance";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -41,11 +43,13 @@ export default function Home() {
             },
           }}
         >
-          <div className="">
+          <div className="flex flex-col">
             <Skills />
-          </div>
-          <div className="">
             <Education />
+            <Experiance />
+          </div>
+          <div className="flex flex-col">
+            <Portfol />
           </div>
         </motion.div>
       </section>

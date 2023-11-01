@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   faJava,
@@ -9,6 +10,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+// import cpp_logo from "../public/images/cpp_logo.svg";
 
 export default function Skills() {
   return (
@@ -80,20 +82,21 @@ export default function Skills() {
               ></FontAwesomeIcon>
               <p>CSS </p>
             </div>
-            <div className=" flex flex-col items-center border-black border-2 rounded-md py-1">
-              {/* <FontAwesomeIcon
+            {/* <div className=" flex flex-col items-center border-black border-2 rounded-md py-1">
+              <FontAwesomeIcon
                 icon={faJava}
                 className="fa-2xl"
-              ></FontAwesomeIcon> */}
+              ></FontAwesomeIcon>
+              <img src={cpp_logo} height={30} width={30} alt="C++" />
               <p>C++ </p>
-            </div>
-            <div className=" flex flex-col items-center border-black border-2 rounded-md py-1">
-              {/* <FontAwesomeIcon
+            </div> */}
+            {/* <div className=" flex flex-col items-center border-black border-2 rounded-md py-1">
+              <FontAwesomeIcon
                 icon={faJava}
                 className="fa-2xl"
-              ></FontAwesomeIcon> */}
+              ></FontAwesomeIcon>
               <p>C </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
