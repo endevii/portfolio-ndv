@@ -3,12 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
 export default function FooterItem({
-  key,
   itemName,
   itemTitle,
   itemLink,
 }: {
-  key: number;
   itemName: IconDefinition;
   itemTitle: string;
   itemLink: string;

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Portfol from "../components/portfolio";
 import Skills from "../components/skills";
 import Education from "../components/education";
-import Experiance from "../components/experiance";
+import Experiance from "../components/experience";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -19,12 +19,9 @@ export default function Home() {
         <About />
       </main>
       <section className="container px-4 mx-auto">
-        {/* grid-rows-2 */}
         <motion.div
           className="flex flex-col h-auto lg:grid  gap-4 content-center lg:grid-cols-2 antialiased"
           initial="hidden"
-          // whileInView="visible"
-          // viewport={{ once: true }}
           animate="visible"
           variants={{
             hidden: {
